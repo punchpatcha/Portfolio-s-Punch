@@ -1,8 +1,8 @@
 // pages/projects.js
 
-import Head from 'next/head';
-import Link from 'next/link';
-import styles from './Projects.module.css';
+import Head from "next/head";
+import Link from "next/link";
+import styles from "./Projects.module.css";
 
 export default function Projects() {
   return (
@@ -18,10 +18,18 @@ export default function Projects() {
           Portfolio
         </Link>
         <nav className={styles.nav}>
-          <Link href="/" className={styles.navLink}>Home</Link>
-          <Link href="/projects" className={styles.navLink}>Projects</Link>
-          <Link href="/experience" className={styles.navLink}>Experience</Link>
-          <Link href="/contact" className={styles.navLink}>Contact</Link>
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
+          <Link href="/projects" className={styles.navLink}>
+            Projects
+          </Link>
+          <Link href="/experience" className={styles.navLink}>
+            Experience
+          </Link>
+          <Link href="/contact" className={styles.navLink}>
+            Contact
+          </Link>
         </nav>
       </header>
 
@@ -40,7 +48,6 @@ export default function Projects() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }

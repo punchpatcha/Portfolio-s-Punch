@@ -1,65 +1,72 @@
 .container {
-  padding: 20px;
-  font-family: 'Mitr';
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Header Section */
 .header {
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f5f5f5;
+  padding: 2% 3% 2% 3%;
+  background-color: #000000;
+  position: relative;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
 }
 
 .logo a {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: x-large;
+  font-weight: 500;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger menu button by default */
 }
 
 .navLinks {
   display: flex;
+  margin-top: 0.6rem;
   list-style-type: none;
 }
 
 .navLinks li {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 .navLinks a {
   text-decoration: none;
-  color: black;
-  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-size: smaller;
 }
 
+.navLinks :hover {
+  color: rgb(165, 165, 165);
+}
 
 /* Image Carousel Section */
 .carousel {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 18rem; /* Default height for medium screens */
   overflow: hidden;
 }
 
 .carouselImage {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Make the image fill the carousel */
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  z-index: 1; /* Set lower z-index for images */
+  z-index: 1;
 }
 
 .carouselImage.active {
@@ -68,9 +75,8 @@
 
 /* Progress Bar Container */
 .progressContainer {
-  
   position: absolute;
-  top: 10px;
+  top: 5%;
   left: 0;
   width: 100%;
   display: flex;
@@ -94,85 +100,544 @@
   transition: width 0.1s linear; /* Smooth progress */
 }
 
-
 /* Profile Section */
 .profile {
+  position: relative; /* Required to position the image */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 3%;
+  overflow: hidden; /* Hides the part of the image that overflows */
 }
 
 .profileText {
+  margin-left: 3.5%;
   text-align: left;
-}
-
-.smallText {
-  font-size: 14px;
-}
-
-.largeText {
-  font-size: 36px;
-  font-weight: bold;
+  flex: 1; /* Allows this section to take available space */
+  max-width: 55rem;
+  min-width: 13rem;
+  line-height: 1.9;
 }
 
 .profileImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 10rem;
-  overflow: hidden;
+  position: relative;
+  max-width: 45%; /* Adjust width as needed */
+  height: auto;
+  border-radius: 2rem; /* Rounded corners */
+  right: -10%;
+  aspect-ratio: 1/1;
+  overflow: hidden; /* Ensures the image is clipped within the rounded corners */
+}
+
+.smallText {
+  line-height: 1.1;
+  font-size: clamp(0.5rem, 1rem, 2rem);
+  text-align: left;
+  width: 28rem;
+}
+
+.smallerTexth1 {
+  font-size: 1.5rem;
+  margin-bottom: -0.3rem;
+}
+
+.smallerTextp {
+  color: #a6d1e6;
+  font-size: 1rem;
+  margin-bottom: -0.3rem;
+}
+
+.largeText {
+  line-height: 1.1;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 /* Education Section */
-.education {
-  display: flex;
-  align-items: center;
+.educationSection {
+  padding: 2% 3% 0% 3%;
 }
 
-.timeline {
-  width: 20%;
-  /* Timeline styling */
+.educationTitle {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.educationContainer {
+  position: relative;
 }
 
 .educationDetails {
-  width: 80%;
   display: flex;
   flex-direction: column;
 }
 
 .educationItem {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 10rem;
-  background-color: #f0f0f0;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  background-color: #edf2f6;
+  border-radius: 4rem;
+  margin-bottom: 3%;
+  width: 100%;
+  max-height: 20rem;
+  gap: 25%;
 }
 
-/* Skills Section */
-.skills {
-  margin-top: 20px;
+.circleNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(
+    2.5rem,
+    10vw,
+    4rem
+  ); /* Adjusts between 1rem and 4rem based on screen width */
+  height: clamp(
+    2.5rem,
+    10vw,
+    4rem
+  ); /* Matches the width for a perfect circle */
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-weight: 500;
+  color: black;
+  margin: 1rem;
+  font-size: 1.5rem; /* Adjust font size based on screen size */
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+.year {
+  text-align: left;
+  width: max-content;
+  background-color: #ffffff;
+  border-radius: 10rem;
+  padding: 1% 5% 1% 5%; /* up r down l */
+  font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+.degree {
+  font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+/* skills section */
+.skillsSection {
+  padding: 0% 0% 2% 3%;
+}
+
+.sectionTitle {
+  margin-top: 2%;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3%;
+  padding-right: 4%;
 }
 
 .skillsContent {
   display: flex;
+  flex-direction: row;
+  width: 100%;
   justify-content: space-between;
+  padding: 0%;
 }
 
-.skillsProjects {
-  width: 40%;
+.skillsText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6%;
+  align-items: center;
+  text-align: center;
+}
+
+/* above button */
+.skillsTitle {
+  font-weight: 200;
+  font-size: clamp(0.5rem, 1rem, 2rem);
+}
+
+.seeMoreButton {
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.5rem, 1rem, 2rem);
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 7rem;
 }
 
 .skillsImages {
-  width: 40%;
-}
-
-/* Skills Details Section */
-.skillsDetails {
+  flex: 2;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
-.technicalSkills,
-.designSkills,
-.softSkills {
+.serviceItem {
+  flex: none;
   width: 30%;
+  margin-right: 1rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.serviceItem img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20%;
+}
+
+.imageDescription {
+  font-size: clamp(0.5rem, 1rem, 2rem);
+  color: #666;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.skillsImages::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.skillsDetails {
+  padding: 0% 0% 2% 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.skillsTitleT{
+  margin-top: 2%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  padding-right: 4%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.leftColumn, .rightColumn {
+  flex: 1;
+  overflow: hidden;
+
+}
+
+.centerRow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centerRow .skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.centerRow .skill img {
+  margin-right: 1rem; 
+  margin-bottom: 0; 
+}
+
+.centerRow .skill p {
+  font-size: clamp(0.5rem, 1rem, 2rem);
+  text-align: left;
+  width: auto; /* Make sure text doesn't stretch unnaturally */
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+.skillRow {
+  display: flex;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.skill img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-bottom: 5px;
+  border-radius: 30%;
+}
+
+.skill p {  /* Description */
+  font-size: clamp(0.5rem, 1rem, 2rem);
+  margin-top: 0.5rem;
+  text-align: center;
+  
+}
+
+.skillList{
+  display: flow-root;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* Styles for smaller screens */
+@media (max-width: 760px) {
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: clamp(0.5rem, 0.6rem, 0.8rem);
+  }
+
+  .smallText {
+    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    line-height: 1;
+    max-width: 13rem;
+    text-align: left;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: left;
+  }
+
+  .logo a {
+    padding: 2% 3% 2% 3%;
+    font-size: medium;
+  }
+
+  .hamburger {
+    display: block; /* Or whatever display property you need */
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: rgb(255, 255, 255); /* Desired color for the hamburger icon */
+    cursor: pointer;
+    padding: 0%; /* Remove default padding */
+  }
+
+  /* Remove default button styles */
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none; /* Remove focus outline */
+    background: none; /* Ensure background does not change */
+  }
+
+  .hidden {
+    display: none; /* Hide the hamburger button */
+  }
+
+  /* Backdrop layer */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 998; /* Just below the menu */
+  }
+
+  /* Main content dimming effect */
+  .mainContent {
+    transition: opacity 0.3s ease;
+  }
+
+  .dimming {
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+
+  .header {
+    padding: auto;
+  }
+
+  /* Slide-in menu */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth slide-in transition */
+    z-index: 999;
+  }
+
+  .navbar.open {
+    display: block; /* Show menu when open */
+    transform: translateX(0); /* Slide into view */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 5rem; /* Adjust based on header height */
+    width: 100%;
+    list-style: none;
+  }
+
+  .navLinks li {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+  }
+
+  .carousel {
+    max-height: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile {
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .profileText {
+    line-height: 1; /* Adjust line height */
+    margin-right: 1rem;
+  }
+
+  .profileImage {
+    min-width: 40%; /* Adjust width to fit better on small screens */
+    max-width: 45%;
+    min-height: 11rem; /* Maintain aspect ratio */
+    right: -7%; /* Reset right position to ensure full visibility */
+    border-radius: 1rem; /* Adjust border radius if needed */
+  }
+
+  .educationTitle {
+    font-size: clamp(1rem, 1.5rem, 3rem);
+  }
+
+  .educationItem {
+    width: auto;
+  }
+
+  .year {
+    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    margin-bottom: auto;
+  }
+
+  .degree {
+    font-size: clamp(0.5rem, 0.5rem, 1rem);
+  }
+
+  .circleNumber {
+    font-size: clamp(
+      0.5rem,
+      1rem,
+      1rem
+    ); /* Adjust font size based on screen size */
+  }
+
+  .sectionTitle {
+    font-size: clamp(1rem, 1.5rem, 3rem);
+  }
+
+  .seeMoreButton {
+    font-size: clamp(0.3rem, 0.3rem, 1rem);
+    max-width: 50%;
+    padding: 4%;
+  }
+
+  .serviceItem{
+    right: -10%;
+  }
+
+  .imageDescription {
+    font-size: clamp(0.3rem, 0.4rem, 0.5rem);
+  }
+
+  .skill p {  /* Description */
+    font-size: clamp(0.3rem, 0.4rem, 0.5rem);
+  }
+
+  .centerRow .skill p {
+    font-size: clamp(0.3rem, 0.4rem, 0.5rem);
+  }
+
+  .skill img {
+    max-width: 2rem;
+    height: auto;
+    border-radius: 4%;
+  }
+
+  .skillsTitleT{
+    font-size: 1rem;
+  }
+
+}
+
+/* Styles for wide screens */
+@media (min-width: 1600px) {
+  .header {
+    padding: 1rem;
+  }
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .smallText {
+    font-size: 2vh;
+    line-height: 1;
+    text-align: left;
+    width: 52rem;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .profile {
+    justify-content: center;
+    gap: 5%;
+  }
+  .profileText {
+    max-width: 55rem;
+  }
+
+  .profileImage {
+    margin-right: 3%;
+    max-width: 25%; /* Increase the image width slightly */
+    right: 0;
+    border-radius: 15%;
+    margin-bottom: 0;
+  }
+
+  /* above button */
+  .skillsTitle {
+    font-weight: 200;
+    font-size: 2rem;
+  }
+
+
+
 }

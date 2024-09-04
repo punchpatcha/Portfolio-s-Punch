@@ -1,24 +1,24 @@
 :root {
-  --font-family: 'Mitr'; /* Font family */
+  --font-family: "Montserrat"; /* Font family */
 }
 
 /* Define custom font faces */
 @font-face {
-  font-family: 'Mitr';
-  font-weight: 400;
-  src: url('/fonts/Mitr-Regular.ttf') format('truetype');
+  font-family: "Montserrat";
+  font-weight: 200;
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Mitr';
+  font-family: "Montserrat";
   font-weight: 500;
-  src: url('/fonts/Mitr-Medium.ttf') format('truetype');
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Mitr';
+  font-family: "Montserrat";
   font-weight: 700;
-  src: url('/fonts/Mitr-Bold.ttf') format('truetype');
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
 }
 
 /* Reset some basic elements */
@@ -29,16 +29,17 @@
 }
 
 /* Apply a smooth transition to all interactive elements */
-a, button {
+a,
+button {
   transition: all 0.3s ease;
 }
 
 /* Set a global font-family */
 body {
   font-family: var(--font-family), sans-serif;
-  color: #f5f5f5;
+  color: #000000;
   line-height: 1.6;
-  background-color: #0a0a0a;
+  background-color: #ffffff;
 }
 
 /* Ensure images are responsive */
@@ -48,14 +49,19 @@ img {
 }
 
 /* Set up base styles for headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
 
 /* Base styles for paragraphs */
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Set up base styles for lists */
@@ -79,10 +85,11 @@ a:hover {
 
 /* Style buttons */
 button {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 200;
   background-color: #3498db;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -91,9 +98,3 @@ button:hover {
   background-color: #2980b9;
 }
 
-/* Add a container to manage width and centering */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}

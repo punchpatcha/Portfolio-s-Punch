@@ -1,14 +1,14 @@
 // pages/experience.js
 
-import Head from 'next/head';
-import Link from 'next/link';
-import styles from './Experience.module.css';
+import Head from "next/head";
+import Link from "next/link";
+import styles from "./Experience.module.css";
 
 export default function Experience() {
   return (
     <div className={styles.container}>
       <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Patcharaluk Port's</title>
         <meta name="description" content="My experience!" />
       </Head>
@@ -18,10 +18,18 @@ export default function Experience() {
           Portfolio
         </Link>
         <nav className={styles.nav}>
-          <Link href="/" className={styles.navLink}>Home</Link>
-          <Link href="/projects" className={styles.navLink}>Projects</Link>
-          <Link href="/experience" className={styles.navLink}>Experience</Link>
-          <Link href="/contact" className={styles.navLink}>Contact</Link>
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
+          <Link href="/projects" className={styles.navLink}>
+            Projects
+          </Link>
+          <Link href="/experience" className={styles.navLink}>
+            Experience
+          </Link>
+          <Link href="/contact" className={styles.navLink}>
+            Contact
+          </Link>
         </nav>
       </header>
 
@@ -38,7 +46,6 @@ export default function Experience() {
           </div>
         </section>
       </main>
-
     </div>
   );
 }
