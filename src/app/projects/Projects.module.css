@@ -1,43 +1,253 @@
 /* Projects.module.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Mitr", sans-serif;
-}
 
+/* Header Section */
 .header {
-  display: flex;
-  justify-content: left;
-  gap: 1rem;
-  padding: 2rem;
-  background-color: #f5f5f5;
-}
-
-.logo {
-  font-size: 1.5rem;
   font-weight: 500;
-}
-
-.nav {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 3% 2% 3%;
+  background-color: #000000;
+  position: relative;
 }
 
-.navLink {
-  text-decoration: none;
-  color: #333;
-}
-
-.projects {
-  padding: 2rem;
-}
-
-.project {
-  margin-bottom: 2rem;
-}
-
-.project img {
+.navbar {
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 600px;
+}
+
+.logo a {
+  font-size: x-large;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger menu button by default */
+}
+
+.navLinks {
+  display: flex;
+  margin-top: 0.6rem;
+  list-style-type: none;
+}
+
+.navLinks li {
+  margin-left: 2rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: smaller;
+}
+
+.navLinks :hover {
+  color: rgb(165, 165, 165);
+}
+
+/* Styles for smaller screens */
+@media (max-width: 760px) {
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: clamp(0.5rem, 0.6rem, 0.8rem);
+  }
+
+  .smallText {
+    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    line-height: 1;
+    max-width: 13rem;
+    text-align: left;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: left;
+  }
+
+  .logo a {
+    padding: 2% 3% 2% 3%;
+    font-size: medium;
+  }
+
+  .hamburger {
+    display: block; /* Or whatever display property you need */
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: rgb(255, 255, 255); /* Desired color for the hamburger icon */
+    cursor: pointer;
+    padding: 0%; /* Remove default padding */
+  }
+
+  /* Remove default button styles */
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none; /* Remove focus outline */
+    background: none; /* Ensure background does not change */
+  }
+
+  .hidden {
+    display: none; /* Hide the hamburger button */
+  }
+
+  /* Backdrop layer */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 998; /* Just below the menu */
+  }
+
+  /* Main content dimming effect */
+  .mainContent {
+    transition: opacity 0.3s ease;
+  }
+
+  .dimming {
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+
+  .header {
+    padding: auto;
+  }
+
+  /* Slide-in menu */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth slide-in transition */
+    z-index: 999;
+  }
+
+  .navbar.open {
+    display: block; /* Show menu when open */
+    transform: translateX(0); /* Slide into view */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 5rem; /* Adjust based on header height */
+    width: 100%;
+    list-style: none;
+  }
+
+  .navLinks li {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+
+  .carousel {
+    max-height: 10rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+/* project */
+
+.projectsSection {
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.categoryTabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.categoryTab {
+  font-size: 1.2rem;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoryTab:hover {
+  background-color: #d8d8d8;
+}
+
+.activeTab {
+  background-color: #333;
+  color: #fff;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.projectCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.projectImage {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.projectTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
+/* Styles for wide screens */
+@media (min-width: 1600px) {
+  .header {
+    padding: 1rem;
+  }
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .smallText {
+    font-size: 2vh;
+    line-height: 1;
+    text-align: left;
+    width: 52rem;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: 3rem;
+    text-align: left;
+  }
 }

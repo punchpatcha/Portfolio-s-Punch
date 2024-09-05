@@ -505,6 +505,7 @@
   .navLinks a {
     display: block;
     width: 100%;
+    color: #000000;
   }
 
   .carousel {
