@@ -38,31 +38,84 @@ export default function Projects() {
     {
       id: 1,
       category: "Coding",
-      title: "Project 1",
-      image: "/cv.png",
-      description: "Description of Project 1.",
+      title: "Thai SMS classification by AI model",
+      image: "/cv1.png",
     },
     {
       id: 2,
       category: "System Analysis",
-      title: "Project 2",
-      image: "/project2.jpg",
-      description: "Description of Project 2.",
+      title: "Patient System Design",
+      image: "/cv.png"
     },
     {
       id: 3,
       category: "Graphic Design",
-      title: "Project 3",
-      image: "/project3.jpg",
-      description: "Description of Project 3.",
+      title: "Matify UI Design",
+      image: "/cv.png"
     },
     {
       id: 4,
       category: "Coding",
-      title: "Project 4",
-      image: "/project4.jpg",
-      description: "Description of Project 4.",
+      title: "Woca Demo C+",
+      image: "/cv.png"
     },
+    {
+      id: 5,
+      category: "Coding",
+      title: "My Portfolio",
+      image: "/cv.png"
+    },
+    {
+      id: 6,
+      category: "Coding",
+      title: "Dog home Demo Python",
+      image: "/cv.png"
+    },
+    {
+      id: 7,
+      category: "Coding",
+      title: "Math Game Demo Java",
+      image: "/cv.png"
+    },
+
+    {
+      id: 8,
+      category: "System Analysis",
+      title: "Matify",
+      image: "/cv.png"
+    },
+    {
+      id: 9,
+      category: "System Analysis",
+      title: "Noodle",
+      image: "/cv.png"
+    },
+    {
+      id: 10,
+      category: "Graphic Design",
+      title: "Content Design",
+      image: "/cv.png"
+    },
+    {
+      id: 11,
+      category: "Graphic Design",
+      title: "Digital Art",
+      image: "/cv.png"
+    },
+    {
+      id: 12,
+      category: "Graphic Design",
+      title: "T-Shirt Design",
+      image: "/cv.png"
+    },
+    {
+      id: 13,
+      category: "Graphic Design",
+      title: "Motion Art",
+      image: "/cv.png"
+    },
+
+    
   ];
 
   const filteredProjects =
@@ -133,7 +186,6 @@ export default function Projects() {
                     className={styles.projectImage}
                   />
                   <h2>{project.title}</h2>
-                  <p>{project.description}</p>
                 </div>
               </Link>
             ))}

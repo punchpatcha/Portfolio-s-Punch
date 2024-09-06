@@ -1,26 +1,87 @@
+/* Header Section */
 .container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container h1 {
+  font-weight: 600;
+  padding: 3rem;
+  padding-bottom: 0;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0% 3% 0% 3%;
+}
+
+/* Header Section */
+.header {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 3% 2% 3%;
+  background-color: #000000;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.logo a {
+  font-size: x-large;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger menu button by default */
+}
+
+.navLinks {
+  display: flex;
+  margin-top: 0.6rem;
+  list-style-type: none;
+}
+
+.navLinks li {
+  margin-left: 2rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: smaller;
+}
+
+.navLinks :hover {
+  color: rgb(165, 165, 165);
 }
 
 .imageGallery {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3% 4% 3% 4%;
+  margin-top: 0%;
 }
 
 .mainImage {
   width: 100%;
+  height: auto;
   max-height: 400px; /* Adjust as needed */
   object-fit: cover; /* Ensure the image covers the area without stretching */
   border-radius: 8px;
   margin-bottom: 20px;
+  object-position: top center;
+  overflow: hidden; /* Hide overflow if image is larger than the frame */
 }
 
 .thumbnailGrid {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   overflow-x: scroll; /* Allow horizontal scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -31,8 +92,8 @@
 }
 
 .thumbnail {
-  width: 100px; /* Fixed width for all thumbnails */
-  height: 100px; /* Fixed height for all thumbnails */
+  width: 150px; /* Fixed width for all thumbnails */
+  height: 150px; /* Fixed height for all thumbnails */
   object-fit: cover; /* Ensure the image covers the area without stretching */
   border-radius: 4px;
   cursor: pointer;
@@ -45,6 +106,8 @@
 
 .projectDetails {
   margin-top: 20px;
+  padding-left: 2rem;
+  margin-bottom: 20px;
 }
 
 .projectDetails h2 {
@@ -54,4 +117,218 @@
 .projectDetails ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 760px) {
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: clamp(0.5rem, 0.6rem, 0.8rem);
+  }
+
+  .smallText {
+    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    line-height: 1;
+    max-width: 13rem;
+    text-align: left;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: left;
+  }
+
+  .logo a {
+    padding: 2% 3% 2% 3%;
+    font-size: medium;
+  }
+
+  .hamburger {
+    display: block; /* Or whatever display property you need */
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: rgb(255, 255, 255); /* Desired color for the hamburger icon */
+    cursor: pointer;
+    padding: 0%; /* Remove default padding */
+  }
+
+  /* Remove default button styles */
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none; /* Remove focus outline */
+    background: none; /* Ensure background does not change */
+  }
+
+  .hidden {
+    display: none; /* Hide the hamburger button */
+  }
+
+  /* Backdrop layer */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 998; /* Just below the menu */
+  }
+
+  /* Main content dimming effect */
+  .mainContent {
+    transition: opacity 0.3s ease;
+  }
+
+  .dimming {
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+
+  .header {
+    padding: auto;
+  }
+
+  /* Slide-in menu */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth slide-in transition */
+    z-index: 999;
+  }
+
+  .navbar.open {
+    display: block; /* Show menu when open */
+    transform: translateX(0); /* Slide into view */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 5rem; /* Adjust based on header height */
+    width: 100%;
+    list-style: none;
+  }
+
+  .navLinks li {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+
+  .imageGallery {
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .container h1 {
+    word-break: keep-all; /* Prevents words from breaking */
+    max-width: 400px;
+    margin: 0 auto; /* Center the text box */
+    white-space: normal; /* Allows text to wrap to the next line */
+    font-size: clamp(1rem, 1.5rem, 2rem);
+  }
+
+  .mainImage {
+    max-height: 200px; /* Adjust the height for smaller screens */
+  }
+
+  .projectDetails h2{
+    font-size: clamp(0.7rem, 1rem, 1rem);
+    font-weight: 600;
+  }
+
+  .projectDetails {
+    padding-left: 2rem;
+  }
+
+  .thumbnail {
+    width: 100px; /* Fixed width for all thumbnails */
+    height: 100px; /* Fixed height for all thumbnails */
+}
+}
+
+
+
+/* Styles for wide screens */
+@media (min-width: 1600px) {
+  .header {
+    padding: 1rem;
+  }
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .smallText {
+    font-size: 2vh;
+    line-height: 1;
+    text-align: left;
+    width: 52rem;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .imageGallery {
+    flex-direction: row; /* Change to row for wide screens */
+    flex: 1;
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  .thumbnailGrid {
+    display: flex;
+    gap: 10px;
+    flex-direction: column; /* Display thumbnails vertically */
+    margin-right: 20px; /* Space between thumbnails and main image */
+  }
+
+  .thumbnail {
+    margin-bottom: 10px;
+    object-fit: cover; /* Maintain image aspect ratio */
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .mainImage {
+    width: 45rem; /* Adjust size of main image */
+    min-height: 45rem;
+    object-fit: cover; /* Ensure the image fits properly */
+    padding: 3rem;
+    overflow: hidden;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .projectSection {
+    display: flex;
+    flex-direction: row; /* Align items side by side */
+    align-items: flex-start;
+    padding: 4rem;
+    padding-top: 0;
+  }
+
+  .projectDetails {
+    flex: 0.5; /* Adjust the width of the details section */
+    max-width: 500px;
+  }
+
+  .projectDetails h2 {
+    font-weight: 600;
+  }
 }

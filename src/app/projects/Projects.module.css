@@ -1,6 +1,11 @@
 /* Projects.module.css */
 
 /* Header Section */
+.container {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header Section */
 .header {
   font-weight: 500;
   display: flex;
@@ -46,6 +51,88 @@
 
 .navLinks :hover {
   color: rgb(165, 165, 165);
+}
+
+/* project */
+
+.projectsSection {
+  padding: 3rem;
+  text-align: center;
+}
+
+.projectsSection h1{
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.categoryTabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.categoryTab {
+  font-size: 1.2rem;
+  margin: 0 0.7rem;
+  padding: 1rem 1rem;
+  border-radius: 0.7rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoryTab:hover {
+  background-color: #d8d8d8;
+}
+
+.activeTab {
+  background-color: #333;
+  color: #fff;
+}
+
+.projectImage {
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  height: 20rem; 
+  object-fit: cover; 
+  border-radius: 2rem;
+  margin-bottom: 3%;
+  object-position: top center;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 18rem));
+  gap: 5rem;
+  justify-content: center;
+}
+
+.projectCard {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  min-height: 20rem;
+}
+
+.projectCard h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.projectTitle { /* "Projects" */
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 30rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 /* Styles for smaller screens */
@@ -156,77 +243,42 @@
     color: #000000;
   }
 
-  .carousel {
-    max-height: 10rem;
-    margin-bottom: 2rem;
+  .categoryTab {
+    font-size: clamp(0.7rem,0.7rem,1rem);
+    padding: 1% 5%;
+    margin: 2%;
   }
 
+  .projectsSection h1{
+    font-size: clamp(1rem,2rem,3rem);
+  }
+
+  .projectGrid {
+    grid-template-columns: repeat(2, 1fr); /* Show two columns on small screens */
+    gap: 2rem;
+  }
+
+  .projectCard {
+    min-height: 18rem; 
+    border-radius: 1rem; 
+    padding: 3%; 
+    border-radius: 3%;
+    width: 100%;
+    min-width: 9rem;
+  }
+
+  .projectImage {
+    height: 70%;
+    margin-bottom: 0.5rem; 
+    border-radius: 3%;
+    object-fit: cover;
+  }
+
+  .projectCard h2 {
+    font-size: clamp(0.8rem, 0.7rem, 1rem); 
+    margin-bottom: 0%; 
+  }
 }
-
-/* project */
-
-.projectsSection {
-  padding: 20px;
-  text-align: center;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.categoryTabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.categoryTab {
-  font-size: 1.2rem;
-  margin: 0 10px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.categoryTab:hover {
-  background-color: #d8d8d8;
-}
-
-.activeTab {
-  background-color: #333;
-  color: #fff;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.projectCard {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.projectImage {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.projectTitle {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
 
 /* Styles for wide screens */
 @media (min-width: 1600px) {
