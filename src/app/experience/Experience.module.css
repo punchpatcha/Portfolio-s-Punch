@@ -1,4 +1,21 @@
-/* Experience.module.css */
+/* Title styling */
+.pageTitle {
+  text-align: end;
+  width: 100%;
+  padding: 2rem;
+  position: sticky;
+  padding-left: 0;
+}
+
+.pageTitle h1 {
+  font-size: 3rem; /* Large font size for visibility */
+}
+
+
+/* Header Section */
+.container {
+  font-family: "Montserrat", sans-serif;
+}
 
 /* Header Section */
 .header {
@@ -47,6 +64,181 @@
 .navLinks :hover {
   color: rgb(165, 165, 165);
 }
+
+/* Main container for the timeline */
+.timelineContainer {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* The vertical timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 20; /* Ensure the timeline is visible above everything else */
+}
+/* Default styling for timelineContainer */
+.timelineContainer {
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.timelineContainer::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* Hide scrollbar for Firefox */
+.timelineContainer {
+  scrollbar-width: none; /* Hides scrollbar */
+}
+
+/* Hide scrollbar for IE and Edge */
+.timelineContainer {
+  -ms-overflow-style: none; /* Hides scrollbar */
+}
+
+/* Each section represents a year */
+.yearSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 70vh;
+  scroll-snap-align: start;
+  padding-left: 1rem; /* Add padding to give space for the timeline line */
+  transition: background-color 0.6s ease, transform 1s ease;
+  z-index: 1; /* Ensure the section is below the point and line */
+}
+
+/* Container for the point and line */
+.pointLineContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.pointLineContainer::before {
+  content: "";
+  position: absolute;
+  top: -50vh; /* Extend the top to start above the visible container */
+  bottom: -50vh; /* Extend the bottom beyond the visible container */
+  left: 12px; /* Position the line to pass through the center of the point */
+  width: 2px;
+  background-color: #636363;
+  z-index: 0; /* Ensure the line is behind the point */
+}
+
+/* Timeline point (the marker) */
+.timelinePoint {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 3px solid #636363;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10; /* Ensure the point is on top of the line */
+  margin: 15px 0;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+/* Filled point when section is active */
+.activePoint {
+  background-color: #636363;
+  transform: scale(1.4);
+}
+
+/* Animated text box for year and description */
+.yearInfo {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.activeInfo {
+  opacity: 1;
+  transform: translateY(-20%);
+}
+
+.yearBox {
+  background-color: #ffffff;
+  opacity: 90%;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.yearBox h3 {
+  font-size: 1.5rem;
+  padding: 1rem 3rem 1rem 3rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image styling */
+.yearImageContainer {
+  position: relative;
+  margin-left: 40px;
+  transition: transform 0.6s ease;
+  display: flex;
+  justify-content: right; /* Center image horizontally */
+  align-items: end; /* Center image vertically */
+  z-index: -1;
+}
+
+.yearImageContainer:hover {
+  transform: scale(1.05);
+}
+
+.yearImage {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.viewButton {
+  opacity: 80%;
+  position: absolute;
+  background-color: #0070f3;
+  color: white;
+  padding: 0.7rem 2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.viewButton:hover {
+  background-color: #005bb5;
+  opacity: 100%;
+  text-decoration: none;
+}
+
+
 
 /* Styles for smaller screens */
 @media (max-width: 760px) {
@@ -155,11 +347,25 @@
     width: 100%;
     color: #000000;
   }
-
-  .carousel {
-    max-height: 10rem;
-    margin-bottom: 2rem;
+  .yearImageContainer {
+    align-items: end;
+    margin: 0 5%;
   }
+
+  .yearBox h3 {
+    font-size: clamp(0.8rem, 0.7rem, 1rem); 
+    padding: 1rem 3rem 1rem 3rem;
+  }
+
+  .pageTitle h1{
+    font-size: clamp(1rem,2rem,3rem);
+  }
+
+  .viewButton {
+    padding: 0.7rem 1.5rem;
+    font-size: clamp(0.8rem, 0.7rem, 1rem); 
+  }
+
 
 }
 
@@ -184,5 +390,9 @@
     line-height: 1;
     font-size: 3rem;
     text-align: left;
+  }
+
+  .pageTitle h1{
+    font-size: 4rem;
   }
 }

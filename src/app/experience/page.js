@@ -3,9 +3,10 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./Experience.module.css";
 
-export default function Projects() {
+const ExperienceTimeline = () => {
+  const [activeYear, setActiveYear] = useState(2024);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null); // Reference to the menu
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
@@ -26,26 +27,38 @@ export default function Projects() {
       }
     };
 
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        // Reset the carousel and progress bars when the page becomes visible
-        setCurrentIndex(0);
-        setProgressBars(Array(images.length).fill(0));
-      }
-    };
-
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-    };
+  const years = [
+    { year: 2024, img: "/cv1.png" },
+    { year: 2023, img: "/cv1.png" },
+    { year: 2022, img: "/cv1.png" },
+    { year: 2021, img: "/cv1.png" },
+  ];
+
+  useEffect(() => {
+    const yearSections = document.querySelectorAll(`.${styles.yearSection}`);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const year = entry.target.getAttribute("data-year");
+            setActiveYear(Number(year));
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    yearSections.forEach((section) => observer.observe(section));
+    return () => yearSections.forEach((section) => observer.unobserve(section));
   }, []);
 
   return (
     <div className={styles.container}>
-      {/* Header Section */}
       <header className={styles.header}>
         <div className={styles.logo}>
           <a href="/">Patcharaluk</a>
@@ -76,20 +89,56 @@ export default function Projects() {
           <div className={styles.backdrop} onClick={closeMenu}></div>
         )}
       </header>
-
-      <main>
-        <section id="experience" className={styles.experience}>
-          <h1>My Experience</h1>
-          <div className={styles.experienceItem}>
-            <h2>Certification</h2>
-            <p>Details about your certification.</p>
-          </div>
-          <div className={styles.experienceItem}>
-            <h2>Volunteer Work</h2>
-            <p>Details about your volunteer work.</p>
-          </div>
-        </section>
-      </main>
+      
+      {/* Title section */}
+      <div className={styles.pageTitle}>
+        <h1>Experience</h1>
+      </div>
+      <div className={styles.timelineContainer}>
+        <div className={styles.timeline}>
+          {years.map((item) => (
+            <div
+              key={item.year}
+              className={`${styles.yearSection} ${
+                activeYear === item.year ? styles.activeSection : ""
+              }`}
+              data-year={item.year}
+            >
+              <div className={styles.pointLineContainer}>
+                <div
+                  className={`${styles.timelinePoint} ${
+                    activeYear === item.year ? styles.activePoint : ""
+                  }`}
+                ></div>
+                {activeYear === item.year && (
+                  <div className={`${styles.yearInfo} ${styles.activeInfo}`}>
+                    <div className={styles.yearBox}>
+                      <h3>{item.year}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className={styles.yearImageContainer}>
+                <img
+                  src={item.img}
+                  alt={`Experience of ${item.year}`}
+                  className={styles.yearImage}
+                />
+                {/* View Button */}
+                <a
+                  href={`/experience/${item.year}`}
+                  className={styles.viewButton}
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default ExperienceTimeline;

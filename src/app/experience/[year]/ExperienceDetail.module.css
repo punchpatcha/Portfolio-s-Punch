@@ -1,0 +1,392 @@
+/* ExperienceDetail.module.css*/
+
+/* Header Section */
+.container {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header Section */
+.header {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 3% 2% 3%;
+  background-color: #000000;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.logo a {
+  font-size: x-large;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger menu button by default */
+}
+
+.navLinks {
+  display: flex;
+  margin-top: 0.6rem;
+  list-style-type: none;
+}
+
+.navLinks li {
+  margin-left: 2rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: smaller;
+}
+
+.navLinks :hover {
+  color: rgb(165, 165, 165);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  width: 100%;
+}
+
+.yearTitle h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  width: 30rem;
+  padding: 2% 3%;
+  padding-bottom: 0;
+}
+
+.textColumn h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  word-break: keep-all;
+  text-align: left;
+  margin-bottom: 3%;
+}
+
+.textColumn p {
+  font-size: 1rem;
+  margin-bottom: 0%;
+  text-align: left;
+  width: 100%;
+  max-width: 50rem;
+  word-break: keep-all;
+}
+
+.detailSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 3%;
+  
+}
+
+.textColumn {
+  width: 45%;
+}
+
+.experienceDetails {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 2rem;
+  aspect-ratio: 1/1; /* Square image */
+}
+
+.grayText {
+  color: #7fa1c3;
+}
+
+.popupGallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryContent {
+  position: relative;
+  max-width: 60%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.closeButton:hover,
+.prevButton:hover,
+.nextButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.activeDot {
+  opacity: 1;
+}
+  
+
+/* Styles for smaller screens */
+@media (max-width: 760px) {
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: clamp(0.5rem, 0.6rem, 0.8rem);
+  }
+
+  .smallText {
+    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    line-height: 1;
+    max-width: 13rem;
+    text-align: left;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: clamp(1rem, 1.5rem, 3rem);
+    text-align: left;
+  }
+
+  .logo a {
+    padding: 2% 3% 2% 3%;
+    font-size: medium;
+  }
+
+  .hamburger {
+    display: block; /* Or whatever display property you need */
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: rgb(255, 255, 255); /* Desired color for the hamburger icon */
+    cursor: pointer;
+    padding: 0%; /* Remove default padding */
+  }
+
+  /* Remove default button styles */
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none; /* Remove focus outline */
+    background: none; /* Ensure background does not change */
+  }
+
+  .hidden {
+    display: none; /* Hide the hamburger button */
+  }
+
+  /* Backdrop layer */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 998; /* Just below the menu */
+  }
+
+  /* Main content dimming effect */
+  .mainContent {
+    transition: opacity 0.3s ease;
+  }
+
+  .dimming {
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+
+  .header {
+    padding: auto;
+  }
+
+  /* Slide-in menu */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #fff;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth slide-in transition */
+    z-index: 999;
+  }
+
+  .navbar.open {
+    display: block; /* Show menu when open */
+    transform: translateX(0); /* Slide into view */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 5rem; /* Adjust based on header height */
+    width: 100%;
+    list-style: none;
+  }
+
+  .navLinks li {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .navLinks a {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+  .yearTitle h1 {
+    font-size: 2rem;
+    max-width: 13rem;
+  }
+
+  .textColumn h2 {
+    font-weight: 600;
+    width: 8rem;
+    font-size: clamp(0.7rem, 0.8rem, 0.9rem);
+  }
+
+  .textColumn p {
+    font-size: clamp(0.5rem, 0.6rem, 0.7rem);
+    width: 11rem;
+  }
+
+  .mainImage {
+    border-radius: 1rem;
+  }
+
+  .experienceDetails {
+    align-items: start;
+  }
+
+  .dot {
+    height: 5px;
+    width: 5px;
+  }
+}
+/* Styles for wide screens */
+@media (min-width: 1600px) {
+  .header {
+    padding: 1rem;
+  }
+  .smallerTextp {
+    line-height: 1.5;
+    font-size: 1rem;
+  }
+
+  .smallText {
+    font-size: 2vh;
+    line-height: 1;
+    text-align: left;
+    width: 52rem;
+  }
+
+  .largeText {
+    line-height: 1;
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .textColumn h2 {
+    font-size: clamp(1.7rem, 2rem, 2rem);
+    width: 26rem;
+  }
+
+  .textColumn {
+    width: 50%;
+    text-align: left;
+  }
+
+  .experienceDetails {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end; /* Move image to the right */
+    align-items: center;
+  }
+
+  .galleryContent {
+    position: relative;
+    max-width: 30%;
+    max-height: 80%;
+  }
+
+}
