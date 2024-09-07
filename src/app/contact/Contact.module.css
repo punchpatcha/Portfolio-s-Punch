@@ -6,15 +6,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 3% 2% 3%;
+  padding: 2% 3%;
   background-color: #000000;
   position: relative;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .navbar {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  transition: transform 0.3s ease; /* Smooth slide-in effect */
 }
 
 .logo a {
@@ -22,6 +24,7 @@
   font-weight: 500;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .hamburger {
@@ -32,6 +35,7 @@
   display: flex;
   margin-top: 0.6rem;
   list-style-type: none;
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
 }
 
 .navLinks li {
@@ -42,10 +46,76 @@
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: smaller;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.navLinks :hover {
+.navLinks a:hover {
   color: rgb(165, 165, 165);
+}
+
+
+/* Image Carousel Section */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 18rem; /* Default height for medium screens */
+  overflow: hidden;
+}
+
+.carouselImage {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Make the image fill the carousel */
+  background-size: cover;
+  background-position: top center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.carouselImage.active {
+  opacity: 1;
+}
+
+/* Progress Bar Container */
+.progressContainer {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 2; /* Set higher z-index for progress bars */
+}
+
+.progressBarWrapper {
+  border-radius: 2rem;
+  width: 30%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 2px;
+  position: relative;
+}
+
+.progressBar {
+  border-radius: 2rem;
+  height: 100%;
+  background-color: #e6e6e6;
+  transition: width 0.1s linear; /* Smooth progress */
+}
+
+.contact{
+  padding: 2rem;
+}
+
+.contact h1{
+  font-weight: 500;
+  margin-top: 2%;
+  font-size: 3rem;
+}
+
+.contact p{
+  font-size: 1.5rem;
 }
 
 /* Styles for smaller screens */
@@ -69,7 +139,7 @@
   }
 
   .logo a {
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3%;
     font-size: medium;
   }
 
@@ -81,6 +151,7 @@
     color: rgb(255, 255, 255); /* Desired color for the hamburger icon */
     cursor: pointer;
     padding: 0%; /* Remove default padding */
+    transition: color 0.3s ease; /* Smooth color transition */
   }
 
   /* Remove default button styles */
@@ -88,10 +159,6 @@
   .hamburger:active {
     outline: none; /* Remove focus outline */
     background: none; /* Ensure background does not change */
-  }
-
-  .hidden {
-    display: none; /* Hide the hamburger button */
   }
 
   /* Backdrop layer */
@@ -103,6 +170,12 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
     z-index: 998; /* Just below the menu */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+  }
+
+  .backdrop.visible {
+    opacity: 1; /* Show backdrop when visible */
   }
 
   /* Main content dimming effect */
@@ -112,10 +185,6 @@
 
   .dimming {
     opacity: 0.5; /* Adjust opacity as needed */
-  }
-
-  .header {
-    padding: auto;
   }
 
   /* Slide-in menu */
@@ -134,7 +203,6 @@
   }
 
   .navbar.open {
-    display: block; /* Show menu when open */
     transform: translateX(0); /* Slide into view */
   }
 
@@ -158,9 +226,19 @@
 
   .carousel {
     max-height: 10rem;
-    margin-bottom: 2rem;
   }
 
+  .contact{
+    padding: 1rem;
+  }
+
+  .contact h1{
+    font-size: clamp(1rem, 1.5rem, 1.5rem);
+  }
+  
+  .contact p{
+    font-size: clamp(0.6rem, 0.7rem, 1rem);
+  }
 }
 
 /* Styles for wide screens */
@@ -185,4 +263,13 @@
     font-size: 3rem;
     text-align: left;
   }
+
+  .contact{
+    padding: 1rem;
+  }
+
+  .contact p{
+    font-size: clamp(1rem, 1rem, 1.5rem);
+  }
 }
+

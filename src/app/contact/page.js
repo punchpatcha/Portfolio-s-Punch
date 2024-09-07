@@ -3,7 +3,8 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./Contact.module.css";
 
-export default function Projects() {
+export default function Contact() {
+  const images = ["/cv.jpg", "/cv1.png", "/cv2.png"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Reference to the menu
 
@@ -43,8 +44,36 @@ export default function Projects() {
     };
   }, []);
 
+  // Timer progress
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [progressBars, setProgressBars] = useState(
+    Array(images.length).fill(0)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIndex === images.length - 1) {
+        setProgressBars(Array(images.length).fill(0)); // Reset progress bars
+      }
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 10000); // 10 seconds for each image
+
+    const progressInterval = setInterval(() => {
+      setProgressBars((prevProgressBars) => {
+        const newProgressBars = [...prevProgressBars];
+        newProgressBars[currentIndex] = newProgressBars[currentIndex] + 1;
+        return newProgressBars;
+      });
+    }, 100); // Update progress every 100ms (10 seconds / 100 steps)
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(progressInterval);
+    };
+  }, [currentIndex, images.length]);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.main}>
       {/* Header Section */}
       <header className={styles.header}>
         <div className={styles.logo}>
@@ -76,17 +105,51 @@ export default function Projects() {
           <div className={styles.backdrop} onClick={closeMenu}></div>
         )}
       </header>
-
+      {/* Image Carousel Section */}
+      <section className={styles.carousel}>
+        <div className={styles.progressContainer}>
+          {progressBars.map((progress, index) => (
+            <div key={index} className={styles.progressBarWrapper}>
+              <div
+                className={styles.progressBar}
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+          ))}
+        </div>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`${styles.carouselImage} ${
+              currentIndex === index ? styles.active : ""
+            }`}
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        ))}
+      </section>
       <main>
         <section id="contact" className={styles.contact}>
           <h1>Contact Me</h1>
           <p>Email: your.email@example.com</p>
           <p>
             LinkedIn:{" "}
-            <a href="https://linkedin.com/in/yourprofile">Your LinkedIn</a>
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Your LinkedIn
+            </a>
           </p>
           <p>
-            GitHub: <a href="https://github.com/yourprofile">Your GitHub</a>
+            GitHub:{" "}
+            <a
+              href="https://github.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Your GitHub
+            </a>
           </p>
           <p>
             Resume:{" "}
