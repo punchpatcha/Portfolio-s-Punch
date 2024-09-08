@@ -75,7 +75,7 @@ export default function Projects() {
       id: 7,
       category: "Graphic Design",
       title: "bechubbyy Digital Art on Instagram",
-      image: "/project/design2/img2.png"
+      image: "/project/design2/img2.jpg"
     },
     {
       id: 8,

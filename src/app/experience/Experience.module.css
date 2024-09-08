@@ -217,9 +217,8 @@
 }
 
 .viewButton {
-  opacity: 80%;
   position: absolute;
-  background-color: #3498db;
+  background-color: #3477db;
   color: white;
   padding: 0.7rem 2rem;
   margin-bottom: 1rem;
@@ -398,4 +397,14 @@
   .pageTitle h1{
     font-size: 4rem;
   }
+
+  
+.yearImage {
+  width: 85%;
+  max-height: 40rem;
+}
+
+.yearImageContainer {
+  margin: 0;
+}
 }

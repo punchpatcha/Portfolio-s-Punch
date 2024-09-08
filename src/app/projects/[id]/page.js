@@ -124,7 +124,7 @@ const projectData = [
     id: 7,
     title: "bechubbyy Digital Art on Instagram",
     images: ["/project/design2/img1.jpg", 
-      "/project/design2/img2.png", 
+      "/project/design2/img2.jpg", 
     "/project/design2/img3.png", 
     "/project/design2/main.png"],
     description:`In early 2024, I launched bechubbyy on Instagram with the aim of creating something memorable and impactful. Using my strengths in ideation and design, 
