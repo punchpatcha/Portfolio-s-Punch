@@ -546,6 +546,7 @@
     margin-bottom: 2rem;
   }
 
+
   .profile {
     align-items: center;
     padding: 0 1rem;
@@ -649,7 +650,8 @@
   }
 
   .carouselImage {
-    background-position: top center;
+    background-position: center;
+  
   }
 
   .leftColumn ul, .rightColumn ul {
