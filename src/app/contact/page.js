@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
-  const images = ["/cv.jpg", "/cv1.png", "/cv2.png"];
+  const images = ["/images/freelance/main-image.png", "/images/techsauce/image5.jpg", "/images/binbuddy/image4.jpg"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Reference to the menu
 
@@ -131,30 +131,30 @@ export default function Contact() {
       <main>
         <section id="contact" className={styles.contact}>
           <h1>Contact Me</h1>
-          <p>Email: your.email@example.com</p>
+          <p>Email: patcharaluk.klin@gmail.com</p>
           <p>
             LinkedIn:{" "}
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="www.linkedin.com/in/patcharaluk-klinsrisuk-3b9329325"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Your LinkedIn
+              www.linkedin.com/in/patcharaluk-klinsrisuk
             </a>
           </p>
           <p>
             GitHub:{" "}
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/punchpatcha"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Your GitHub
+              https://github.com/punchpatcha
             </a>
           </p>
           <p>
             Resume:{" "}
-            <a href="/resume.pdf" download>
+            <a href="/Resume.pdf" download>
               Download My Resume
             </a>
           </p>

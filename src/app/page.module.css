@@ -348,20 +348,18 @@
   color: #081f5c;
 }
 
-
-
 .row {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  
-  
 }
 
 .leftColumn, .rightColumn {
   flex: 1;
   overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 
@@ -378,7 +376,6 @@
   align-items: center;
 }
 
-
 .centerRow .skill p {
   font-size: clamp(0.5rem, 1rem, 2rem);
   text-align: left;
@@ -389,15 +386,17 @@
 
 .skillRow {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center items horizontally */
   flex-direction: column;
+  align-items: center; /* Center items vertically */
+  
 }
 
 .skill {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-
+  align-items: center; /* Center items within the skill container */
+  margin: 0 1rem; /* Add spacing between items if needed */
 }
 
 .skill img {
@@ -413,16 +412,21 @@
   margin-top: 0.5rem;
   text-align: center;
   width: 7rem;
-  
 }
 
-
-.skillList{
+.skillList {
   display: flow-root;
   align-items: center;
   flex-direction: column;
+  text-align: left;
+  
 }
 
+.leftColumn ul, .rightColumn ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: disc; 
+}
 
 
 /* Styles for smaller screens */
@@ -646,6 +650,10 @@
 
   .carouselImage {
     background-position: top center;
+  }
+
+  .leftColumn ul, .rightColumn ul {
+    font-size: clamp(0.3rem, 0.4rem, 0.5rem);
   }
 
 }

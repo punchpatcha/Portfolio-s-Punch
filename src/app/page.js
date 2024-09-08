@@ -235,74 +235,30 @@ export default function Home() {
         <div className={styles.row}>
           {/* Technical Skills Section */}
           <div className={styles.leftColumn}>
-            <h2 className={styles.skillsTitleT}>Technical Skills</h2>
-            <div className={styles.skillRow}>
-    
-                <li> Python</li>
-   
-              <div className={styles.skill}>
-                
-                <li> JavaScript </li>
-              </div>
-              <div className={styles.skill}>
-              
-                <li>HTML/CSS </li>
-              </div>
-            </div>
-            <div className={styles.skillRow}>
-              <div className={styles.skill}>
-            
-                <li>Next.js</li>
-              </div>
-              <div className={styles.skill}>
-               
-                <li> React.js</li>
-              </div>
-              <div className={styles.skill}>
-               
-                <li>Data Visualization</li>
-              </div>
-            </div>
-            <div className={styles.skillRow}>
-              <div className={styles.skill}>
-               
-                <li>Microsoft office</li>
-              </div>
-              <div className={styles.skill}>
-               
-                <li>Visual Studio Code </li>
-              </div>
-            </div>
-          </div>
+    <h2 className={styles.skillsTitleT}>Technical Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>Next.js</li>
+      <li>React.js</li>
+      <li>Data Visualization</li>
+      <li>Microsoft Office</li>
+      <li>Visual Studio Code</li>
+    </ul>
+  </div>
 
           {/* Design Skills Section */}
           <div className={styles.rightColumn}>
-            <h2 className={styles.skillsTitleT}>Design Skills</h2>
-            <div className={styles.skillRow}>
-              <div className={styles.skill}>
-              
-                <li> UI/UX Design</li>
-              </div>
-              <div className={styles.skill}>
-             
-                <li> Adobe Photoshop</li>
-              </div>
-              <div className={styles.skill}>
-              
-                <li>Adobe Premier Pro</li>
-              </div>
-            </div>
-            <div className={styles.skillRow}>
-              <div className={styles.skill}>
-               
-                <li> Figma</li>
-              </div>
-              <div className={styles.skill}>
-               
-                <li> Procreate</li>
-              </div>
-            </div>
-          </div>
+    <h2 className={styles.skillsTitleT}>Design Skills</h2>
+    <ul>
+      <li>UI/UX Design</li>
+      <li>Adobe Photoshop</li>
+      <li>Adobe Premiere Pro</li>
+      <li>Figma</li>
+      <li>Procreate</li>
+    </ul>
+  </div>
         </div>
 
         {/* Soft Skills Section */}

@@ -32,10 +32,10 @@ const ExperienceTimeline = () => {
   }, []);
 
   const years = [
-    { year: 2024, img: "/cv1.png" },
-    { year: 2023, img: "/cv1.png" },
-    { year: 2022, img: "/cv1.png" },
-    { year: 2021, img: "/cv1.png" },
+    { year: 2024, img: "/experience/2024.jpg" },
+    { year: 2023, img: "/experience/2023.jpg" },
+    { year: 2022, img: "/experience/2022.jpg" },
+    { year: 2021, img: "/experience/2021.jpg" },
   ];
 
   useEffect(() => {
