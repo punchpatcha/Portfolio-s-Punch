@@ -25,9 +25,9 @@ const projectData = [
     ],
 
     githubLink:
-      "Github : https://github.com/punchpatcha/thai-sms-detection.git",
+      "https://github.com/punchpatcha/thai-sms-detection.git",
 
-    web: "Thai SMS Demo : https://thai-sms-detection.vercel.app/",
+    web: "https://thai-sms-detection.vercel.app/",
   },
   {
     id: 2,
@@ -60,7 +60,7 @@ const projectData = [
     outcome: [
       "The website effectively highlights my projects and experiences, presenting a well-organized and professional online portfolio. It successfully demonstrates my skills in Next.js, Node.js, and React, and provides a user-friendly interface for visitors to learn more about me.",
     ],
-    web: "Web Portfolio : https://portfolio-s-punch.vercel.app/"
+    web: "https://portfolio-s-punch.vercel.app/"
 
   },
   {
@@ -116,7 +116,7 @@ const projectData = [
       " _shopskyy has flourished into a successful platform for my graphic design work, marked by a growing follower base and a steady stream of commissions.",
       "Running this account has significantly enhanced my skills in client communication, effective time management, and meeting deadlines, turning this creative endeavor into a valuable learning experience that benefits both my professional and personal growth.",
     ],
-    web: "Follow on Instagram : https://www.instagram.com/_shopskyy?igsh=MTRqczlzbHUxeHlubg== ",
+    web: "https://www.instagram.com/_shopskyy?igsh=MTRqczlzbHUxeHlubg== ",
 
 
   },
@@ -136,7 +136,7 @@ const projectData = [
     outcome: [
       "Successfully built a community of over 7,000 followers who actively engage with and share the character’s messages. Some reels have surpassed 100K views, demonstrating strong audience connection and content appeal.",
     ],
-    web: "Follow on Instagram : https://www.instagram.com/bechubbyy?igsh=MWQ1bjlpbzMwenNreg==",
+    web: "https://www.instagram.com/bechubbyy?igsh=MWQ1bjlpbzMwenNreg==",
 
 
   },
