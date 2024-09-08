@@ -1,10 +1,15 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const images = ["/cv.jpg", "/cv1.png", "/cv2.png"];
+  const images = [
+    "/cover/image1.jpg",
+    "/cover/image2.jpg",
+    "/cover/image3.jpg",
+  ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Reference to the menu
 
@@ -163,22 +168,35 @@ export default function Home() {
             <div className={styles.educationItem}>
               <div className={styles.circleNumber}>01</div>
               <div className={styles.textContent}>
-                <div className={styles.year}>2021-Recently</div>
-                <div className={styles.degree}>Bangkok University </div>
+                <div className={styles.year}>2021 - Recently</div>
+                <li className={styles.name}>Bangkok University </li>
                 <div className={styles.degree}>
                   Bachelor of Science in Computer Science
+                </div>
+                <div className={styles.degree}>
+                  School of Information technology and innovation
+                </div>
+                <div className={styles.degree}>
+                Scholarship Student
+                </div>
+                <div className={styles.degree}>
+                GPA: 3.98
                 </div>
               </div>
             </div>
             <div className={styles.educationItem}>
               <div className={styles.circleNumber}>02</div>
               <div className={styles.textContent}>
-                <div className={styles.year}>2015-2021</div>
-                <div className={styles.degree}>
+                <div className={styles.year}>2015 - 2021</div>
+                <li className={styles.name}>
                   Triamudom Suksa Pattanakarn Nonthaburi
+                </li>
+                <div className={styles.degree}>Science and Mathematic Program</div>
+                <div className={styles.degree}>
+                GPA: 3.75
                 </div>
-                <div className={styles.degree}>Scimath Program</div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -190,26 +208,24 @@ export default function Home() {
         <div className={styles.skillsContent}>
           <div className={styles.skillsText}>
             <h2 className={styles.skillsTitle}>My Projects</h2>
-            <button className={styles.seeMoreButton}>See More</button>
+            <Link href="/projects">
+              <button className={styles.seeMoreButton}>View More</button>
+            </Link>
           </div>
           <div className={styles.skillsImages}>
             <div className={`${styles.serviceItem} ${styles.draggable}`}>
-              <img src="/cv.png" alt="Project 1" />
+              <img src="/myskill/image1.jpg" alt="Project 1" />
               <p className={styles.imageDescription}>
                 Thai SMS Classification by AI
               </p>
             </div>
             <div className={`${styles.serviceItem} ${styles.draggable}`}>
-              <img src="/cv.png" alt="Project 2" />
-              <p className={styles.imageDescription}>
-                Description for Project 2
-              </p>
+              <img src="/myskill/image2.png" alt="Project 2" />
+              <p className={styles.imageDescription}>Artwork Design</p>
             </div>
             <div className={`${styles.serviceItem} ${styles.draggable}`}>
-              <img src="/cv.png" alt="Project 3" />
-              <p className={styles.imageDescription}>
-                Description for Project 3
-              </p>
+              <img src="/myskill/image3.png" alt="Project 3" />
+              <p className={styles.imageDescription}>Woca Mobile App</p>
             </div>
           </div>
         </div>
@@ -221,41 +237,40 @@ export default function Home() {
           <div className={styles.leftColumn}>
             <h2 className={styles.skillsTitleT}>Technical Skills</h2>
             <div className={styles.skillRow}>
+    
+                <li> Python</li>
+   
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 1" />
-                <p>Description 1</p>
+                
+                <li> JavaScript </li>
               </div>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 2" />
-                <p>Description 2</p>
-              </div>
-              <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 3" />
-                <p>Description 3</p>
-              </div>
-            </div>
-            <div className={styles.skillRow}>
-              <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 4" />
-                <p>Description 4</p>
-              </div>
-              <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 5" />
-                <p>Description 5</p>
-              </div>
-              <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 6" />
-                <p>Description 6</p>
+              
+                <li>HTML/CSS </li>
               </div>
             </div>
             <div className={styles.skillRow}>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 7" />
-                <p>Description 7</p>
+            
+                <li>Next.js</li>
               </div>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 8" />
-                <p>Description 8</p>
+               
+                <li> React.js</li>
+              </div>
+              <div className={styles.skill}>
+               
+                <li>Data Visualization</li>
+              </div>
+            </div>
+            <div className={styles.skillRow}>
+              <div className={styles.skill}>
+               
+                <li>Microsoft office</li>
+              </div>
+              <div className={styles.skill}>
+               
+                <li>Visual Studio Code </li>
               </div>
             </div>
           </div>
@@ -265,26 +280,26 @@ export default function Home() {
             <h2 className={styles.skillsTitleT}>Design Skills</h2>
             <div className={styles.skillRow}>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 9" />
-                <p>Description 9</p>
+              
+                <li> UI/UX Design</li>
               </div>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 10" />
-                <p>Description 10</p>
+             
+                <li> Adobe Photoshop</li>
               </div>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 11" />
-                <p>Description 11</p>
+              
+                <li>Adobe Premier Pro</li>
               </div>
             </div>
             <div className={styles.skillRow}>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 12" />
-                <p>Description 12</p>
+               
+                <li> Figma</li>
               </div>
               <div className={styles.skill}>
-                <img src="/cv.png" alt="Skill 13" />
-                <p>Description 13</p>
+               
+                <li> Procreate</li>
               </div>
             </div>
           </div>
@@ -295,28 +310,25 @@ export default function Home() {
           <h2 className={styles.skillsTitleT}>Soft Skills</h2>
           <div className={styles.skillList}>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 14" />
-              <p> Leadership</p>
+              <li> Leadership</li>
             </div>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 15" />
-              <p>Adaptability </p>
+              <li>Adaptability </li>
             </div>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 16" />
-              <p>Creativity </p>
+              <li>Creativity </li>
             </div>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 17" />
-              <p>Attention to Detail</p>
+              <li>Attention to Detail</li>
             </div>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 18" />
-              <p>Time Management</p>
+              <li>Time Management</li>
             </div>
             <div className={styles.skill}>
-              <img src="/cv.png" alt="Skill 19" />
-              <p>Problem-Solving</p>
+              <li>Problem-Solving</li>
+            </div>
+            <div className={styles.skill}>
+              <li>Presentation</li>
             </div>
           </div>
         </div>

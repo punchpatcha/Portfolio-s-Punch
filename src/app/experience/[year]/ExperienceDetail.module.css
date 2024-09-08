@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 3% 2% 3%;
-  background-color: #000000;
+  background-color: #081f5c;
   position: relative;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .navLinks :hover {
-  color: rgb(165, 165, 165);
+  color:  #f2f0de;
 }
 
 .logo {
@@ -65,7 +65,8 @@
 .yearTitle h1 {
   font-size: 3rem;
   font-weight: 600;
-  border-bottom: 1px solid black;
+  color: #334eac;
+  border-bottom: 1px solid #7fa1c3;
   width: 30rem;
   padding: 2% 3%;
   padding-bottom: 0;
@@ -77,6 +78,17 @@
   word-break: keep-all;
   text-align: left;
   margin-bottom: 3%;
+  color: #081f5c;
+}
+
+.textColumn h1{
+  color: #7096d1;
+  font-size: 1rem;
+  margin-bottom: 0%;
+  text-align: left;
+  width: 100%;
+  max-width: 50rem;
+  word-break: keep-all;
 }
 
 .textColumn p {
@@ -86,6 +98,7 @@
   width: 100%;
   max-width: 50rem;
   word-break: keep-all;
+  color: #081f5c;
 }
 
 .detailSection {
@@ -115,9 +128,7 @@
   aspect-ratio: 1/1; /* Square image */
 }
 
-.grayText {
-  color: #7fa1c3;
-}
+
 
 .popupGallery {
   position: fixed;
@@ -161,7 +172,6 @@
 .nextButton {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   font-size: 40px;
   color: white;
   background: none;
@@ -307,13 +317,17 @@
   .navLinks li {
     text-align: left;
     padding: 5%;
+    margin-left: 0;
   }
 
   .navLinks a {
     display: block;
-    width: 100%;
-    color: #000000;
-  }
+    width: 80%;
+    color: #081f5c;
+    border-radius: 3rem;
+    padding: 0 10%;
+    background-color: #f7f2eb96;}
+
   .yearTitle h1 {
     font-size: 2rem;
     max-width: 13rem;
@@ -324,10 +338,14 @@
     width: 8rem;
     font-size: clamp(0.7rem, 0.8rem, 0.9rem);
   }
+  .textColumn h1{
+    font-size: clamp(0.5rem, 0.6rem, 0.7rem);
+    width: 11rem;
+  }
 
   .textColumn p {
     font-size: clamp(0.5rem, 0.6rem, 0.7rem);
-    width: 11rem;
+
   }
 
   .mainImage {

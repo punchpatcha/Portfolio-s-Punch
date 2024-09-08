@@ -24,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 3% 2% 3%;
-  background-color: #000000;
+  background-color: #081f5c;
   position: relative;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .navLinks :hover {
-  color: rgb(165, 165, 165);
+  color: #f2f0de;
 }
 
 /* Main container for the timeline */
@@ -131,7 +131,7 @@
   bottom: -50vh; /* Extend the bottom beyond the visible container */
   left: 12px; /* Position the line to pass through the center of the point */
   width: 2px;
-  background-color: #636363;
+  background-color: #081f5c;
   z-index: 0; /* Ensure the line is behind the point */
 }
 
@@ -139,8 +139,8 @@
 .timelinePoint {
   width: 24px;
   height: 24px;
-  background-color: white;
-  border: 3px solid #636363;
+  background-color: #f7f2eb;
+  border: 3px solid #081f5c;
   border-radius: 50%;
   position: relative;
   z-index: 10; /* Ensure the point is on top of the line */
@@ -150,7 +150,7 @@
 
 /* Filled point when section is active */
 .activePoint {
-  background-color: #636363;
+  background-color: #081f5c;
   transform: scale(1.4);
 }
 
@@ -200,7 +200,7 @@
   transition: transform 0.6s ease;
   display: flex;
   justify-content: right; /* Center image horizontally */
-  align-items: end; /* Center image vertically */
+  align-items: flex-end; /* Center image vertically */
   z-index: -1;
 }
 
@@ -219,7 +219,7 @@
 .viewButton {
   opacity: 80%;
   position: absolute;
-  background-color: #0070f3;
+  background-color: #3498db;
   color: white;
   padding: 0.7rem 2rem;
   margin-bottom: 1rem;
@@ -233,7 +233,7 @@
 }
 
 .viewButton:hover {
-  background-color: #005bb5;
+  background-color: #7096d1;
   opacity: 100%;
   text-decoration: none;
 }
@@ -340,13 +340,16 @@
   .navLinks li {
     text-align: left;
     padding: 5%;
+    margin-left: 0;
   }
 
   .navLinks a {
     display: block;
-    width: 100%;
-    color: #000000;
-  }
+    width: 80%;
+    color: #081f5c;
+    border-radius: 3rem;
+    padding: 0 10%;
+    background-color: #f7f2eb96;}
   .yearImageContainer {
     align-items: end;
     margin: 0 5%;

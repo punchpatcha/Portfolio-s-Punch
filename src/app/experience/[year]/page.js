@@ -41,22 +41,25 @@ const imageSets = {
     "/images/workpoint/image5.jpg",
   ],
   youtuber: [
-    "/images/youtuber/image1.jpg",
-    "/images/youtuber/image2.jpg",
-    "/images/youtuber/image3.jpg",
-    "/images/youtuber/image4.jpg",
+    "/images/youtuber/image1.png",
+    "/images/youtuber/image2.png",
+    "/images/youtuber/image3.png",
+    "/images/youtuber/image4.png",
   ],
   scl: [
     "/images/scl/image1.jpg",
     "/images/scl/image2.jpg",
-    "/images/scl/image3.jpg",
-    "/images/scl/image4.jpg",
+    "/images/scl/image3.png",
+    "/images/scl/image4.png",
+    "/images/scl/image5.png",
   ],
   freelance: [
-    "/images/freelance/image1.jpg",
-    "/images/freelance/image2.jpg",
-    "/images/freelance/image3.jpg",
-    "/images/freelance/image4.jpg",
+    "/images/freelance/img.png",
+    "/images/freelance/img1.jpg",
+    "/images/freelance/img2.jpg",
+    "/images/freelance/img3.png",
+    "/images/freelance/img4.jpg",
+    "/images/freelance/img5.png"
   ],
 
 };
@@ -68,30 +71,23 @@ const ExperienceDetail = ({ params }) => {
       {
         title: "Thai SMS Showcase",
         date: "29 - 30 August 2024",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-        including coding the model and integrating it into a web application. 
-        Designed and implemented the web application, utilizing technologies 
-        such as Python and Next.js to enable real-time SMS detection. Conducted 
-        live demonstrations, explaining the AI model's functionality and how the 
-        code supports SMS detection, while providing real-time testing on the web platform.`,
+        description: `I developed and showcased an AI model for detecting Thai SMS messages, coding the model 
+        and integrating it into a web application. I designed and implemented the web app using Python and Next.js, enabling real-time SMS detection. During live demonstrations, I explained how the AI model works and how the code facilitates SMS detection, offering real-time testing and insights on the web platform.
+`,
         imageId: "thai-sms-showcase",
       },
       {
         title: "Techsauce Volunteer",
         date: "7 - 9 August 2024",
-        description: `Escorted speakers and guests, acted as an interpreter between speakers 
-                  and the backstage team. Coordinated the showcase stage, assisted overseas speakers, 
-                  Thai government agencies, and Thai startups. Provided support to speakers, including 
-                  attending to their needs, such as water or presentation issues.`,
+        description: `As a volunteer at Techsauce, I played a key role in escorting speakers and guests, serving as an interpreter between them and the backstage team. I managed the showcase stage, providing essential support to overseas speakers, Thai government agencies, and Thai startups. My responsibilities included ensuring speakers had everything they needed, from refreshments to resolving any presentation issues, contributing to the smooth execution of the event.
+
+`,
         imageId: "techsauce",
       },
       {
         title: "BinBuddy",
         date: "11 May 2024",
-        description: `Led the development of "BinBuddy," a smart exchange machine that addresses 
-                      the increasing problem of parcel waste from online shopping. Used the concept 
-                      of startup business with the idea "Transform Your Trash into Happiness" to promote 
-                      recycling of waste by offering personalized rewards.`,
+        description: `I led the development of "BinBuddy," an innovative smart exchange machine designed to address the increasing issue of parcel waste from online shopping. Using the concept "Transform Your Trash into Happiness," I created a system that promotes recycling by offering personalized rewards. This project was recognized with the First Place Award in a pitching competition, highlighting its impact and effectiveness in promoting sustainable waste management.`,
         imageId: "binbuddy",
       },
     ],
@@ -99,60 +95,41 @@ const ExperienceDetail = ({ params }) => {
       {
         title: "Part of Speaker Volunteer at Bu Openhouse 2023",
         date: "9 November 2023",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-          including coding the model and integrating it into a web application. 
-          Designed and implemented the web application, utilizing technologies 
-          such as Python and Next.js to enable real-time SMS detection. Conducted 
-          live demonstrations, explaining the AI model's functionality and how the 
-          code supports SMS detection, while providing real-time testing on the web platform.`,
+        description: `I had the opportunity to be a Volunteer at Bangkok University’s Openhouse 2023, where I guided high school students through an introduction to IoT (Internet of Things) using Arduino. This hands-on project
+         is part of the third-year curriculum, and I helped the students understand its fundamentals, providing them with insights into what they will be learning in their future studies. It was a rewarding experience, allowing me to share my knowledge while inspiring the next generation of learners.`,
         imageId: "bu2023",
       },
     ],
     2022: [
       {
-        title: "BU x Workpoint Creative Sandbox Competition ",
+        title: "BU x Workpoint Creative Sandbox Competition 2022 ",
         date: "13 August 2022",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-              including coding the model and integrating it into a web application. 
-              Designed and implemented the web application, utilizing technologies 
-              such as Python and Next.js to enable real-time SMS detection. Conducted 
-              live demonstrations, explaining the AI model's functionality and how the 
-              code supports SMS detection, while providing real-time testing on the web platform.`,
+        description: `I participated in the BU x Workpoint Creative Sandbox, a competition aimed at creating innovative TV show concepts, sponsored by Workpoint. Our team developed "Killer Lies ไม่ตายก็รอด," a thrilling reality game show inspired by board games, where contestants navigate a suspenseful
+         challenge to uncover a "killer" among them. In my role as the video editor, I designed and edited dynamic motion graphics and produced a captivating teaser for the show using Adobe After Effects, Premiere Pro, and Photoshop. Our efforts were recognized with an Honorable Mention award, highlighting the project's creativity and execution.`,
         imageId: "workpoint",
       },
       {
         title: "Youtuber",
         date: "2022 - Present",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-              including coding the model and integrating it into a web application. 
-              Designed and implemented the web application, utilizing technologies 
-              such as Python and Next.js to enable real-time SMS detection. Conducted 
-              live demonstrations, explaining the AI model's functionality and how the 
-              code supports SMS detection, while providing real-time testing on the web platform.`,
+        description: `"P Punchi" is my YouTube channel where I take charge of scripting, ideating, and editing all content. 
+        I never grow tired of the creative process, whether it’s editing videos, illustrating graphics, 
+        or crafting engaging sponsorship scripts. The channel primarily focuses on makeup tutorials, 
+        which has attracted beauty brands to collaborate with me for product reviews. This experience has honed my skills in negotiating deals, applying creative problem-solving, and managing time efficiently, given the detailed work involved in content creation and troubleshooting.`,
         imageId: "youtuber",
       },
     ],
     2021: [
       {
         title: "SCL [Social Change Leader Incubation Program]",
-        date: "29 - 30 August 2024",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-                  including coding the model and integrating it into a web application. 
-                  Designed and implemented the web application, utilizing technologies 
-                  such as Python and Next.js to enable real-time SMS detection. Conducted 
-                  live demonstrations, explaining the AI model's functionality and how the 
-                  code supports SMS detection, while providing real-time testing on the web platform.`,
+        date: "12 June 2021 - 12 August 2022",
+        description: `As part of the Social Change Leader Incubation Program, I developed a project focused on waste segregation. This initiative involved designing distinctive waste bins and creating educational content about waste separation, which is often overlooked by the public. The content was delivered through an online platform and tested at Bangkok University. My responsibilities included brainstorming and analyzing innovative ideas for waste segregation, and collecting and analyzing data from the bins on a weekly basis. At the conclusion of the program, our team donated the collected waste to recycling facilities. This experience enhanced my leadership skills and refined my abilities in critical thinking and analysis.`,
         imageId: "scl",
       },
       {
         title: "Freelance Arts & Content Creator",
         date: "2021 – Present",
-        description: `Developed and presented an AI model for detecting Thai SMS, 
-                  including coding the model and integrating it into a web application. 
-                  Designed and implemented the web application, utilizing technologies 
-                  such as Python and Next.js to enable real-time SMS detection. Conducted 
-                  live demonstrations, explaining the AI model's functionality and how the 
-                  code supports SMS detection, while providing real-time testing on the web platform.`,
+        description: `I began accepting illustration commissions around 2021 when my Instagram page, _shopskyy, started gaining traction. Since then, I have taken on various graphic design projects and content creation tasks, including promotional 
+        designs for clients. I also launched a new page, bechubbyy, focused on digital art with animated elements. These projects have been a creative outlet and a source of income while balancing my studies.`,
         imageId: "freelance",
       },
     ],
@@ -292,7 +269,7 @@ const ExperienceDetail = ({ params }) => {
         {currentExperiences.map((experience, index) => {
           const selectedImages = imageSets[experience.imageId] || [];
           const mainImageSrc =
-            mainImages[experience.imageId] || "/images/placeholder.jpg";
+            mainImages[experience.imageId] ;
 
           return (
             <div
@@ -305,7 +282,7 @@ const ExperienceDetail = ({ params }) => {
                 <>
                   <div className={styles.textColumn}>
                     <h2>{experience.title}</h2>
-                    <p className={styles.grayText}>{experience.date}</p>
+                    <h1>{experience.date}</h1>
                     <p>{experience.description}</p>
                   </div>
                   <div className={styles.experienceDetails}>
@@ -340,7 +317,7 @@ const ExperienceDetail = ({ params }) => {
                   </div>
                   <div className={styles.textColumn}>
                     <h2>{experience.title}</h2>
-                    <p className={styles.grayText}>{experience.date}</p>
+                    <h1>{experience.date}</h1>
                     <p>{experience.description}</p>
                   </div>
                 </>

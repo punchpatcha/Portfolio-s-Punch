@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 3% 2% 3%;
-  background-color: #000000;
+  background-color: #081f5c;;
   position: relative;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .navLinks :hover {
-  color: rgb(165, 165, 165);
+  color: #f2f0de;
 }
 
 /* project */
@@ -74,28 +74,30 @@
 }
 
 .categoryTab {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0 0.7rem;
   padding: 1rem 1rem;
   border-radius: 0.7rem;
   border: none;
-  background-color: #f0f0f0;
+  background-color: #edf1f6;
   cursor: pointer;
+  color: #77afd4;
   transition: background-color 0.3s ease;
 }
 
 .categoryTab:hover {
-  background-color: #d8d8d8;
+  color: #334eac;
+  background-color: #f7f2ebb4;
 }
 
 .activeTab {
-  background-color: #333;
+  background-color: #081f5c;
   color: #fff;
 }
 
 .projectImage {
   width: 100%; /* Ensures the image takes up the full width of the container */
-  height: 20rem; 
+  height: 17rem; 
   object-fit: cover; 
   border-radius: 2rem;
   margin-bottom: 3%;
@@ -123,11 +125,13 @@
 .projectCard h2 {
   font-size: 1rem;
   font-weight: 500;
+  color: #334eac;
 }
 
-.projectTitle { /* "Projects" */
+.projectsSection h1 { /* "Projects" */
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #081f5c;
 }
 
 .title {
@@ -236,18 +240,27 @@
   .navLinks li {
     text-align: left;
     padding: 5%;
+    margin-left: 0;
   }
 
   .navLinks a {
     display: block;
-    width: 100%;
-    color: #000000;
-  }
+    width: 80%;
+    color: #081f5c;
+    border-radius: 3rem;
+    padding: 0 10%;
+    background-color: #f7f2eb96;}
 
   .categoryTab {
-    font-size: clamp(0.7rem,0.7rem,1rem);
-    padding: 1% 5%;
-    margin: 2%;
+    font-size: clamp(0.7rem,0.6rem,0.7rem);
+    padding: 1% 2% 0% 2%;
+    margin: 0%;
+    
+  }
+
+  .categoryTabs {
+    gap: 3%;
+    
   }
 
   .projectsSection h1{
@@ -260,7 +273,7 @@
   }
 
   .projectCard {
-    min-height: 18rem; 
+    min-height: 15rem; 
     border-radius: 1rem; 
     padding: 3%; 
     border-radius: 3%;
@@ -269,8 +282,7 @@
   }
 
   .projectImage {
-    height: 70%;
-    margin-bottom: 0.5rem; 
+    height: 60%;
     border-radius: 3%;
     object-fit: cover;
   }

@@ -127,6 +127,7 @@ export default function Contact() {
           ></div>
         ))}
       </section>
+      
       <main>
         <section id="contact" className={styles.contact}>
           <h1>Contact Me</h1>

@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 3% 2% 3%;
-  background-color: #000000;
+  background-color: #081f5c;
   position: relative;
 }
 
@@ -47,14 +47,14 @@
 }
 
 .navLinks :hover {
-  color: rgb(165, 165, 165);
+  color: #f2f0de;
 }
 
 /* Image Carousel Section */
 .carousel {
   position: relative;
   width: 100%;
-  height: 18rem; /* Default height for medium screens */
+  height: 25rem; /* Default height for medium screens */
   overflow: hidden;
 }
 
@@ -63,7 +63,7 @@
   width: 100%;
   height: 100%; /* Make the image fill the carousel */
   background-size: cover;
-  background-position: top center;
+  background-position: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   z-index: 1;
@@ -142,7 +142,7 @@
 }
 
 .smallerTextp {
-  color: #a6d1e6;
+  color: #7096d1;
   font-size: 1rem;
   margin-bottom: -0.3rem;
 }
@@ -163,6 +163,8 @@
   font-weight: 500;
   text-align: left;
   margin-bottom: 2%;
+  color: #081f5c;
+  font-weight: 600;
 }
 
 .educationContainer {
@@ -178,12 +180,12 @@
   justify-content: flex-start;
   display: flex;
   align-items: center; /* Align items vertically centered */
-  background-color: #edf2f6;
+  background-color: #f7f2eb96;
   border-radius: 4rem;
   margin-bottom: 3%;
   width: 100%;
   max-height: 20rem;
-  gap: 25%;
+
 }
 
 .circleNumber {
@@ -198,12 +200,12 @@
   height: clamp(
     2.5rem,
     10vw,
-    4rem
+    3.7rem
   ); /* Matches the width for a perfect circle */
   background-color: #ffffff;
   border-radius: 50%;
   font-weight: 500;
-  color: black;
+  color: #334eac;
   margin: 1rem;
   font-size: 1.5rem; /* Adjust font size based on screen size */
 }
@@ -211,24 +213,34 @@
 .textContent {
   display: flex;
   flex-direction: column;
-  margin: 1%;
+  margin-top: 2%;
+  width: 100%;
+  margin-bottom: 2%;
+  color: #334eac;
 }
 .year {
   text-align: left;
   width: max-content;
   background-color: #ffffff;
   border-radius: 10rem;
-  padding: 1% 5% 1% 5%; /* up r down l */
+  padding: 0.5% 5%; /* up r down l */
   font-size: clamp(0.5rem, 1rem, 2rem);
+
 }
 
 .degree {
   font-size: clamp(0.5rem, 1rem, 2rem);
 }
 
+.name {
+  font-weight: 600;
+  margin-top: 1%;
+  margin-bottom: 0%;
+} 
+
 /* skills section */
 .skillsSection {
-  padding: 0% 0% 2% 3%;
+  padding: 0% 0% 5% 3%;
 }
 
 .sectionTitle {
@@ -238,6 +250,8 @@
   text-align: center;
   margin-bottom: 3%;
   padding-right: 4%;
+  color: #081f5c;
+  font-weight: 600;
 }
 
 .skillsContent {
@@ -261,12 +275,15 @@
 .skillsTitle {
   font-weight: 200;
   font-size: clamp(0.5rem, 1rem, 2rem);
+  color: #7096d1;
 }
 
 .seeMoreButton {
+  margin-top: 15%;
+  align-items: center;
   padding: 0.5rem 1rem;
-  font-size: clamp(0.5rem, 1rem, 2rem);
-  background-color: #0070f3;
+  font-size: clamp(0.5rem, 0.7rem, 1rem);
+  background-color: #334eac;
   color: #fff;
   border: none;
   border-radius: 2rem;
@@ -280,6 +297,7 @@
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  
 }
 
 .serviceItem {
@@ -291,19 +309,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .serviceItem img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 10rem;
+  object-position:  center;
   object-fit: cover;
   border-radius: 20%;
 }
 
 .imageDescription {
   font-size: clamp(0.5rem, 1rem, 2rem);
-  color: #666;
+  color: #7096d1;
   margin-top: 0.5rem;
   text-align: center;
 }
@@ -318,6 +337,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  color: #334eac;
 }
 .skillsTitleT{
   margin-top: 2%;
@@ -325,17 +345,23 @@
   font-weight: 500;
   text-align: center;
   padding-right: 4%;
+  color: #081f5c;
 }
+
+
 
 .row {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  
+  
 }
 
 .leftColumn, .rightColumn {
   flex: 1;
   overflow: hidden;
+
 
 }
 
@@ -352,10 +378,6 @@
   align-items: center;
 }
 
-.centerRow .skill img {
-  margin-right: 1rem; 
-  margin-bottom: 0; 
-}
 
 .centerRow .skill p {
   font-size: clamp(0.5rem, 1rem, 2rem);
@@ -368,11 +390,12 @@
 .skillRow {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .skill {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
 }
@@ -382,15 +405,17 @@
   height: 6rem;
   object-fit: contain;
   margin-bottom: 5px;
-  border-radius: 30%;
+  border-radius: 25%;
 }
 
 .skill p {  /* Description */
   font-size: clamp(0.5rem, 1rem, 2rem);
   margin-top: 0.5rem;
   text-align: center;
+  width: 7rem;
   
 }
+
 
 .skillList{
   display: flow-root;
@@ -500,12 +525,16 @@
   .navLinks li {
     text-align: left;
     padding: 5%;
+    margin-left: 0;
   }
 
   .navLinks a {
     display: block;
-    width: 100%;
-    color: #000000;
+    width: 80%;
+    color: #081f5c;
+    border-radius: 3rem;
+    padding: 0 10%;
+    background-color: #f7f2eb96;
   }
 
   .carousel {
@@ -540,15 +569,28 @@
   }
 
   .year {
-    font-size: clamp(0.6rem, 0.6rem, 1rem);
+    font-size: clamp(0.5rem, 0.5rem, 1rem);
     margin-bottom: auto;
   }
 
   .degree {
     font-size: clamp(0.5rem, 0.5rem, 1rem);
   }
-
+  
+  .name {
+    font-size: clamp(0.5rem, 0.5rem, 1rem);
+  } 
   .circleNumber {
+    width: clamp(
+      3rem,
+      10vw,
+      4rem
+    ); /* Adjusts between 1rem and 4rem based on screen width */
+    height: clamp(
+      2rem,
+      10vw,
+      4rem
+    );
     font-size: clamp(
       0.5rem,
       1rem,
@@ -562,12 +604,22 @@
 
   .seeMoreButton {
     font-size: clamp(0.3rem, 0.3rem, 1rem);
-    max-width: 50%;
-    padding: 4%;
+    margin: 0%;
+    padding: 0.3rem 1rem;
+  }
+
+  .skillsText{
+    align-items: center;
+  }
+
+  .serviceItem img{
+    height: 100px;
+    
   }
 
   .serviceItem{
     right: -10%;
+    margin: 2%;
   }
 
   .imageDescription {
@@ -576,9 +628,10 @@
 
   .skill p {  /* Description */
     font-size: clamp(0.3rem, 0.4rem, 0.5rem);
+    width: 3rem;
   }
 
-  .centerRow .skill p {
+  .centerRow .skill li {
     font-size: clamp(0.3rem, 0.4rem, 0.5rem);
   }
 
@@ -587,9 +640,12 @@
     height: auto;
     border-radius: 4%;
   }
-
   .skillsTitleT{
     font-size: 1rem;
+  }
+
+  .carouselImage {
+    background-position: top center;
   }
 
 }
@@ -638,4 +694,29 @@
     font-weight: 200;
     font-size: 2rem;
   }
+
+  .serviceItem img{
+    max-height: 25rem;
+    
+  }
+
+  .carouselImage {
+    background-position: center;
+  }
+
+  .textContent {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+
+  .name {
+    margin-top: 00.5%;
+  } 
+
+  .seeMoreButton {
+    font-size: clamp(0.5rem, 1rem, 1.5rem);
+    max-width: 10rem ;
+  }
+
 }

@@ -39,80 +39,55 @@ export default function Projects() {
       id: 1,
       category: "Coding",
       title: "Thai SMS classification by AI model",
-      image: "/cv1.png",
+      image: "/project/coding1/main.png",
     },
     {
       id: 2,
-      category: "System Analysis",
-      title: "Patient System Design",
-      image: "/cv.png"
+      category: "Coding",
+      title: "Woca Mobile App",
+      image: "/project/coding2/main.png"
     },
     {
       id: 3,
-      category: "Graphic Design",
-      title: "Matify UI Design",
-      image: "/cv.png"
+      category: "Coding",
+      title: "My Portfolio",
+      image:"/project/coding3/main.jpg"
     },
     {
       id: 4,
-      category: "Coding",
-      title: "Woca Demo C+",
-      image: "/cv.png"
+      category: "System Analysis & Design",
+      title: "Matify",
+      image: "/project/sad/main.jpg"
     },
     {
       id: 5,
-      category: "Coding",
-      title: "My Portfolio",
-      image: "/cv.png"
+      category: "System Analysis & Design",
+      title: "Noodle",
+      image: "/project/sad2/main.jpg"
     },
     {
       id: 6,
-      category: "Coding",
-      title: "Dog home Demo Python",
-      image: "/cv.png"
+      category: "Graphic Design",
+      title: "_shopskyy: Art and Design on Instagram",
+      image: "/project/design1/main.png"
     },
     {
       id: 7,
-      category: "Coding",
-      title: "Math Game Demo Java",
-      image: "/cv.png"
+      category: "Graphic Design",
+      title: "bechubbyy Digital Art on Instagram",
+      image: "/project/design2/img2.png"
     },
-
     {
       id: 8,
-      category: "System Analysis",
-      title: "Matify",
-      image: "/cv.png"
+      category: "Graphic Design",
+      title: "T-Shirt Design",
+      image: "/project/design3/main.jpg"
     },
     {
       id: 9,
-      category: "System Analysis",
-      title: "Noodle",
-      image: "/cv.png"
-    },
-    {
-      id: 10,
-      category: "Graphic Design",
-      title: "Content Design",
-      image: "/cv.png"
-    },
-    {
-      id: 11,
-      category: "Graphic Design",
-      title: "Digital Art",
-      image: "/cv.png"
-    },
-    {
-      id: 12,
-      category: "Graphic Design",
-      title: "T-Shirt Design",
-      image: "/cv.png"
-    },
-    {
-      id: 13,
       category: "Graphic Design",
       title: "Motion Art",
-      image: "/cv.png"
+      image: "/project/design4/img2.jpg"
     },
 
     
@@ -161,7 +136,7 @@ export default function Projects() {
           <h1>Projects</h1>
 
           <div className={styles.categoryTabs}>
-            {["All", "Coding", "System Analysis", "Graphic Design"].map(
+            {["All", "Coding", "System Analysis & Design", "Graphic Design"].map(
               (category) => (
                 <button
                   key={category}

@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2% 3%;
-  background-color: #000000;
+  background-color: #081f5c;;
   position: relative;
   transition: background-color 0.3s ease; /* Smooth background color transition */
 }
@@ -50,7 +50,7 @@
 }
 
 .navLinks a:hover {
-  color: rgb(165, 165, 165);
+  color: #f2f0de;
 }
 
 
@@ -216,13 +216,16 @@
   .navLinks li {
     text-align: left;
     padding: 5%;
+    margin-left: 0;
   }
 
   .navLinks a {
     display: block;
-    width: 100%;
-    color: #000000;
-  }
+    width: 80%;
+    color: #081f5c;
+    border-radius: 3rem;
+    padding: 0 10%;
+    background-color: #f7f2eb96;}
 
   .carousel {
     max-height: 10rem;
