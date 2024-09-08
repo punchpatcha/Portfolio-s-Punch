@@ -135,7 +135,7 @@ export default function Contact() {
           <p>
             LinkedIn:{" "}
             <a
-              href="www.linkedin.com/in/patcharaluk-klinsrisuk-3b9329325"
+              href="https://www.linkedin.com/in/patcharaluk-klinsrisuk-3b9329325"
               target="_blank"
               rel="noopener noreferrer"
             >
