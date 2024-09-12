@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
-  const images = ["/images/freelance/main-image.png", "/images/techsauce/image5.jpg", "/images/binbuddy/image4.jpg"];
+  const images = ["/images/freelance/main-image.png", "/images/techsauce/image5.png", "/images/binbuddy/image4.jpg"];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null); // Reference to the menu
 
