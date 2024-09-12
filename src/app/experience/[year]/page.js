@@ -22,7 +22,7 @@ const imageSets = {
     "/images/techsauce/image6.png",
   ],
   binbuddy: [
-    "/images/binbuddy/image1.png",
+    "/images/binbuddy/img1.png",
     "/images/binbuddy/image2.png",
     "/images/binbuddy/image3.png",
     "/images/binbuddy/image4.jpg",
@@ -287,6 +287,7 @@ const ExperienceDetail = ({ params }) => {
                   </div>
                   <div className={styles.experienceDetails}>
                     <img
+                      
                       src={mainImageSrc}
                       alt={`Experience of ${year}`}
                       onClick={() =>
