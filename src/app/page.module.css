@@ -422,12 +422,16 @@
   
 }
 
-.leftColumn ul, .rightColumn ul {
+.leftColumn ul {
   padding: 0;
-  margin: 0;
+  margin-right: 2rem;
   list-style-type: disc; 
 }
-
+.rightColumn ul {
+  padding: 0;
+  margin-right: 1rem;
+  list-style-type: disc; 
+}
 
 /* Styles for smaller screens */
 @media (max-width: 760px) {

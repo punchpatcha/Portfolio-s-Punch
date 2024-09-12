@@ -245,6 +245,8 @@ export default function Home() {
       <li>Data Visualization</li>
       <li>Microsoft Office</li>
       <li>Visual Studio Code</li>
+      <li>Thai  (Native)</li>
+      <li>English  (Intermidiate)</li>
     </ul>
   </div>
 
