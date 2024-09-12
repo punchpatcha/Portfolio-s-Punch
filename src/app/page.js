@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const images = [
-    "/cover/image1.jpg",
+    "/cover/image1.png",
     "/cover/image2.jpg",
     "/cover/image3.jpg",
   ];
