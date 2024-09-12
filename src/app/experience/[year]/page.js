@@ -15,7 +15,7 @@ const imageSets = {
   ],
   techsauce: [
     "/images/techsauce/image1.png",
-    "/images/techsauce/image2.jpg",
+    "/images/techsauce/image2.png",
     "/images/techsauce/image3.jpg",
     "/images/techsauce/image4.jpg",
     "/images/techsauce/image5.jpg",

@@ -210,7 +210,7 @@
 
 .yearImage {
   width: 100%;
-  max-width: 40rem;
+  max-width: 25rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: block;
@@ -229,6 +229,8 @@
   font-weight: 500;
   transition: background-color 0.3s ease;
   z-index: 1;
+  border-color: #ffffff;
+  border-style: solid;
 }
 
 .viewButton:hover {
@@ -400,8 +402,11 @@
 
   
 .yearImage {
-  width: 85%;
-  max-height: 40rem;
+  width: 90%;
+  max-width: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .yearImageContainer {
